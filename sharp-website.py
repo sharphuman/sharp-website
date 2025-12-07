@@ -163,7 +163,7 @@ st.markdown("""
 
 # --- SECRETS CHECK ---
 if "ANTHROPIC_API_KEY" not in st.secrets or "GITHUB_TOKEN" not in st.secrets:
-    st.error("🔒 SECRETS MISSING: Please add ANTHROPIC_API_KEY and GITHUB_TOKEN to secrets.toml")
+    st.error("🔒 SECRETS MISSING: Please add ANTHROPIC_API_KEY and GITHUB_TOKEN to secrets.toml")
     st.stop()
 
 anthropic = Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
