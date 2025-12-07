@@ -96,7 +96,7 @@ st.title("🚧 Sharp Website // Sandbox")
 # SESSION STATE INIT
 if 'sandbox_code' not in st.session_state: st.session_state.sandbox_code = ""
 
-    c1, c2 = st.columns([1, 1])
+c1, c2 = st.columns([1, 1])
 
 # This button is the ONLY thing that triggers a reload now
     generate_pressed = st.form_submit_button("⚡ Generate Code")
