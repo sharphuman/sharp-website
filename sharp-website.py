@@ -102,7 +102,7 @@ c1, c2 = st.columns([1, 1])
         # This button is the ONLY thing that triggers a reload now
         generate_pressed = st.form_submit_button("⚡ Generate Code")
 
-    if generate_pressed:
+    if  generate_pressed:
         if not prompt:
             st.warning("Please enter requirements.")
         else:
