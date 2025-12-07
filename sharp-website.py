@@ -151,7 +151,7 @@ st.set_page_config(page_title="Sharp Website | Sandbox", page_icon="🚧", layou
 # --- CSS: STABILIZED UI ---
 st.markdown("""
 <style>
-    .stApp { background-color: #0e1117; color: #e0e0e0; }
+    .stApp { background-color: #0e1117; color: #e0e0e0; }
     h1 { color: #bd00ff !important; font-family: monospace; letter-spacing: -2px;}
     .stTextArea textarea, .stTextInput input { 
         background-color: #111; color: #00ff9d; border: 1px solid #333; font-family: monospace; 
@@ -164,7 +164,7 @@ st.markdown("""
 # --- SECRETS CHECK ---
 if "ANTHROPIC_API_KEY" not in st.secrets or "GITHUB_TOKEN" not in st.secrets:
     st.error("🔒 SECRETS MISSING: Please add ANTHROPIC_API_KEY and GITHUB_TOKEN to secrets.toml")
-    st.stop()
+    st.stop()
 
 anthropic = Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
 DEFAULT_REPO = "your-username/your-repo-name" # <--- UPDATE THIS IF YOU WANT
