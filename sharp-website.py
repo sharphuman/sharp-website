@@ -55,6 +55,25 @@ def architect_website(prompt, mode):
     except Exception as e:
         return f"Error: {e}"
 
+def get_calendly_embed():
+    """Generates the static HTML for the Calendly embed section."""
+    # Use a generic, common Calendly embed structure
+    return f"""
+<section id="calendly-section" style="padding: 50px 20px; text-align: center; background: #0a0a0a;">
+    <h2 style="color: #bd00ff; margin-bottom: 20px;">Ready to Talk?</h2>
+    <p style="color: #e0e0e0;">Pick a time that works for you and we’ll walk through your current stack, funnels, and hiring challenges.</p>
+    
+    <iframe 
+        src="https://calendly.com/YOUR_USERNAME/30min-consult" 
+        width="100%" 
+        height="800px" 
+        frameborder="0" 
+        style="min-width:320px; border-radius:10px; box-shadow: 0 0 15px rgba(189, 0, 255, 0.5);"
+    ></iframe>
+    <p style="color: #888;">Replace 'YOUR_USERNAME/30min-consult' with your actual Calendly URL.</p>
+</section>
+"""
+
 def push_to_live(html_content, repo_name, commit_message, token):
     try:
         g = Github(token)
