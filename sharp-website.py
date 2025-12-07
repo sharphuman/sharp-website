@@ -98,16 +98,7 @@ if 'sandbox_code' not in st.session_state: st.session_state.sandbox_code = ""
 
 c1, c2 = st.columns([1, 1])
 
-# === LEFT COLUMN: THE INPUTS (LOCKED IN FORM) ===
-with c1:
-    st.markdown("### 1. Blueprint")
-    
-    # WRAPPING IN FORM STOPs THE "GREY BUTTON" GLITCH
-    with st.form("blueprint_form"):
-        repo_target = st.text_input("Target Repo (username/repo)", value=DEFAULT_REPO)
-        design_mode = st.selectbox("Design System", ["Neon Cyberpunk (Sharp)", "Minimal SaaS", "Luxury Dark", "Brutalist"])
-        prompt = st.text_area("Client Requirements", height=250, placeholder="Describe the site...")
-        
+
         # This button is the ONLY thing that triggers a reload now
         generate_pressed = st.form_submit_button("⚡ Generate Code")
 
