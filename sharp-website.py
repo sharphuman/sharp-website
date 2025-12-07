@@ -46,7 +46,7 @@ def architect_website(prompt, mode):
     try:
         msg = anthropic.messages.create(
             # FIXED: Updated model to a current, valid version
-            model="claude-3-5-sonnet-20241022",
+            model="claude-sonnet-4-5-20250929",
             max_tokens=4000,
             system=system_prompt,
             messages=[{"role": "user", "content": prompt}]
