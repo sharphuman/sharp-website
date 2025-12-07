@@ -29,7 +29,7 @@ st.markdown("""
 try:
     ANTHROPIC_KEY = st.secrets["ANTHROPIC_API_KEY"]
     GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"] # <--- NEW SECRET NEEDED
-    REPO_NAME = "your-username/your-repo-name" # <--- UPDATE THIS
+    REPO_NAME = "sharphuman/sharp-web" # <--- UPDATE THIS
 except:
     st.error("⚠️ Missing Secrets. Need ANTHROPIC_API_KEY and GITHUB_TOKEN.")
     st.stop()
